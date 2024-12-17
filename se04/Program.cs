@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Security.Cryptography;
 using System.Threading.Channels;
@@ -405,18 +406,12 @@ namespace se04
             #endregion
 
             #region 3- Write a c# Function that accept 4 parameters from user and return result of summation and subtracting of two numbers
-            //Console.WriteLine("Enter 4 Numbers ");
-            //Console.WriteLine("Sum of first two numbers\nDifference of last two numbers\n");
             //Console.Write("Enter The 1st Number: ");
             //int.TryParse(Console.ReadLine(), out int num1);
             //Console.Write("Enter The 2nd Number: ");
             //int.TryParse(Console.ReadLine(), out int num2);
-            //Console.Write("Enter The 3rd Number: ");
-            //int.TryParse(Console.ReadLine(), out int num3);
-            //Console.Write("Enter The 4th Number: ");
-            //int.TryParse(Console.ReadLine(), out int num4);
-
-            //calculator(num1, num2, num3, num4);
+            //calculator(num1, num2, out int sum, out int sub);
+            //Console.WriteLine($"{num1} + {num2} = {sum}\n{num1} - {num2} = {sub}");
             #endregion
 
             #region 4- Write a program in C# Sharp to create a function to calculate the sum of the individual digits of a given numbe
@@ -431,7 +426,49 @@ namespace se04
             //Console.WriteLine(IsPrime(num));
             #endregion
 
+            #region 6- Create a function named MinMaxArray, to return the minimum and maximum values stored in an array, using reference parameters
+            //Console.Write("Enter Size Of The Array: ");
+            //int.TryParse(Console.ReadLine(), out int size);
+            //if (size < 2)
+            //    Console.WriteLine("Invaild Input ");
+            //else
+            //{
+            //    int[] arr = new int[size];
+            //    Console.WriteLine("Enter The Elements Of The Array: ");
+            //    for (int i = 0; i < arr.Length; i++)
+            //    {
+            //        Console.Write($"Enter Element {i + 1}: ");
+            //        while (!(int.TryParse(Console.ReadLine(), out arr[i])))
+            //            Console.WriteLine("Please Enter An Integer");
+            //    }
+            //    MinMaxArray(arr, out int max, out int min);
+            //    Console.WriteLine($"The Maximum Number: {max}\nThe Minimum Number: {min}");
+            //}
+            #endregion
 
+            #region 7- Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter
+            //bool flag;
+            //int num;
+            //do
+            //{
+            //    Console.Write("Enter The Number: ");
+            //    flag = int.TryParse(Console.ReadLine(), out  num);
+            //} while (!flag || num == 0);
+            //Console.WriteLine($"Factorial of {num} is: { Factorial(num)}");
+            #endregion
+
+            #region 8- Create a function named "ChangeChar" to modify a letter in a certain position (0 based) of a string, replacing it with a different letter
+            //Console.Write("Enter The Text: ");
+            //string str = Console.ReadLine();
+            //Console.Write("Enter The Position: ");
+            //int.TryParse(Console.ReadLine(), out int pos);
+            //Console.Write("Enter The New Char: ");
+            //char.TryParse(Console.ReadLine(), out char c);
+
+            //string newStr = ChangeChar(str, pos, c);
+            //Console.WriteLine($"Original string: {str}");
+            //Console.WriteLine($"Modified string: {newStr}");
+            #endregion
 
             #endregion
 
@@ -465,13 +502,10 @@ namespace se04
         #endregion
 
         #region (Function) Q3: 
-        //static void calculator(int sum1, int sum2, int sub1, int sub2)
+        //static void calculator(int num1, int num2, out int sum, out int sub)
         //{
-        //    int sum = sum1 + sum2;
-        //    int sub = sub1 - sub2;
-        //    Console.WriteLine($"Sum of first two numbers: {sum}");
-        //    Console.WriteLine($"Difference of last two numbers: {sub}");
-
+        //    sum = num1 + num2;
+        //    sub = num1 - num2;
         //}
         #endregion
 
@@ -503,5 +537,43 @@ namespace se04
         //    return true;
         //}
         #endregion
+
+        #region (Function) Q6:
+        //static void MinMaxArray(int[]arr, out int max, out int min)
+        //{
+        //    max = arr.Max();
+        //    min = arr.Min();
+        //}
+        #endregion
+
+        #region (Function) Q7:
+        //static long Factorial(int num)
+        //{
+        //    int result = 1; 
+        //    for (int i = 1; i < num; i++)
+        //    {
+        //        result *= i;
+        //    }
+        //    return result;
+        //}
+        #endregion
+
+        #region (Function) Q8:
+        //static string ChangeChar(string input, int position, char newChar)
+        //{
+        //    if (position < 0 || position >= input.Length)
+        //    {
+        //        throw new ArgumentOutOfRangeException(nameof(position), "Position must be within the string's bounds.");
+        //    }
+
+        //    // Replace character at specified position
+        //    char[] charArray = input.ToCharArray();
+        //    charArray[position] = newChar;
+
+        //    return new string(charArray);
+        //}
+        #endregion
+
+
     }
 }
